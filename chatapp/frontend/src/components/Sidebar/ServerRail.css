@@ -1,0 +1,57 @@
+.server-rail {
+  width: 64px;
+  background: var(--bg0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 0;
+  gap: 6px;
+  border-right: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.s-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  background: var(--bg2);
+  color: var(--text2);
+  transition: border-radius 0.2s, background 0.2s, color 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+
+.s-icon:hover,
+.s-icon.active {
+  border-radius: 14px;
+  color: var(--text1);
+}
+
+.s-icon.home { background: var(--accent); color: #fff; font-size: 20px; }
+.s-icon.add  { background: var(--bg2); color: var(--text3); font-size: 24px; font-weight: 300; }
+.s-icon.add:hover { background: var(--green); color: #fff; }
+
+.s-icon.active::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 20px;
+  background: var(--text1);
+  border-radius: 0 4px 4px 0;
+}
+
+.s-sep {
+  width: 28px;
+  height: 1px;
+  background: var(--border);
+  margin: 2px 0;
+}
